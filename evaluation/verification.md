@@ -1,6 +1,6 @@
 # Treasury SDK verification appendix
 
-Date: 5 October 2026. This is an AI-assisted evaluation prepared for Himanshu Kumar's review. Results below were observed by the agent; human review time has not been measured.
+Date: 5 October 2026. This is an AI-assisted evaluation approved by Himanshu Kumar. Results below were observed by the agent. Himanshu reports completing design and direction within 15 minutes and giving final approval.
 
 ## What was built
 
@@ -45,4 +45,4 @@ An initial npm cache failure was an environment issue: the default cache directo
 
 This is a two-endpoint evaluation, not complete Treasury API coverage or a production-readiness claim. Authentication is unnecessary for these endpoints and was not evaluated. Automatic pagination, optional retry/rate-limit/cost features, other languages were not tested. The package has not been published to npm. No API account, key, payment or client submission was made during the evaluation.
 
-AI assisted with research, input description, generator operation, testing and this draft report. Himanshu selected the API and approved the scope/design/plan. The agreed maximum is 30 minutes of active human work; the separate time log does not claim that human limit has been measured or verified.
+Himanshu selected the API, designed and directed the evaluation, and gave final approval. He reports completing design and direction within 15 minutes. AI handled implementation with the Voxgig generator, verification and polishing of the documentation and report. The agreed maximum is 30 minutes of active human work; the separate time log distinguishes self-reported human time from recorded agent elapsed time.

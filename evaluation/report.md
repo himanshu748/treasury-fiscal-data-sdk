@@ -1,6 +1,6 @@
 # Treasury SDK experience report
 
-5 October 2026. AI-assisted draft for Himanshu Kumar's review.
+5 October 2026. AI-assisted report approved by Himanshu Kumar.
 
 Voxgig generated a working TypeScript SDK for two Treasury Fiscal Data endpoints: Debt to the Penny and Average Interest Rates. Both provide public data without an account or API key. Catalogue searches found no matching Voxgig SDK. The project uses the MIT License.
 
@@ -26,6 +26,6 @@ const records = await client.DebtToPenny().list({ page_size: 2 })
 
 Coverage is limited to these two read endpoints. Authentication, automatic pagination and optional retry features still need separate checks.
 
-AI helped research the API, operate the generator, write tests and draft this report. An agent ran the checks; Himanshu approved the API and plan. Human work time hasn't been recorded. The brief limits active human work to 30 minutes.
+Himanshu designed and directed the evaluation, reporting that this work took no more than 15 minutes, and gave final approval. AI handled implementation with the Voxgig generator, verification and polishing of the documentation and report. The recorded checks were run by an agent. The human time is self-reported; the brief limits active human work to 30 minutes.
 
 Commands, versions and evidence are in [the verification appendix](verification.md).

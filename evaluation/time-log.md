@@ -11,7 +11,7 @@ All intervals below are UTC. They record agent session elapsed time, not human l
 
 The automated research checks for AviationWeather and Treasury ran in parallel within the first research interval. Their elapsed times are not added again to the parent elapsed time.
 
-Human work: unmeasured. Himanshu should record active review, direction and other work separately and stop at 30 minutes total, even if a task remains unfinished. The brief explicitly permits AI assistance and caps human work; no separate unlimited-agent-work commitment is assumed.
+Human contribution, reported by Himanshu on 5 October 2026: design and direction completed within 15 minutes, followed by final approval. AI handled implementation, verification and polishing. The human duration is self-reported. The brief permits AI assistance and caps active human work at 30 minutes.
 
 The generator's human-readable log timestamps use the execution environment's local clock display; this summary and machine-readable API receipts use UTC.
 
@@ -19,4 +19,4 @@ Total agent elapsed across these non-overlapping intervals: 36 min 20 sec. This 
 
 Report clarity edit requested by Himanshu: 2026-10-05 15:33:08 to 2026-10-05 15:37:27 UTC, 4 min 19 sec of agent elapsed time. This is additional to the earlier total and is not human time.
 
-Later publication preparation included browser sign-in waits, approval waits and upload retries. Active agent time for that stage was not measured and is not included in the earlier total. Human time remains unmeasured.
+Later publication preparation included browser sign-in waits, approval waits and upload retries. Active agent time for that stage was not measured and is not included in the earlier total. The human contribution is recorded separately above.

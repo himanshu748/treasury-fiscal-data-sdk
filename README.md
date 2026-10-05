@@ -108,4 +108,4 @@ The initial scaffold used `@voxgig/sdkgen@0.30.6`. Installed generator versions 
 
 MIT. Upstream copyright notices are retained. [AUTHORSHIP.md](AUTHORSHIP.md) records Himanshu Kumar's original specification, configuration, tests and report.
 
-This evaluation covers two read endpoints. Automatic pagination, optional retry features and other Treasury endpoints have not been evaluated. AI assisted with research, generation, testing and writing; Himanshu chose the API and approved the plan. The agent ran the recorded checks.
+This evaluation covers two read endpoints. Automatic pagination, optional retry features and other Treasury endpoints have not been evaluated. Himanshu chose the API, designed and directed the evaluation, and gave final approval. He reports completing design and direction within 15 minutes. AI handled implementation with the Voxgig generator, verification and polishing. The agent ran the recorded checks.
