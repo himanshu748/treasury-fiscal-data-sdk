@@ -1,0 +1,69 @@
+{
+  "existing": {
+    "debt_to_penny": {
+      "DEBT_TO_PENNY00": {
+        "debt_held_public_amt": "s6e",
+        "intragov_hold_amt": "s6f",
+        "record_calendar_day": "s70",
+        "record_calendar_month": "s71",
+        "record_calendar_quarter": "s72",
+        "record_calendar_year": "s73",
+        "record_date": "s74",
+        "record_fiscal_quarter": "s75",
+        "record_fiscal_year": "s76",
+        "src_line_nbr": "s77",
+        "tot_pub_debt_out_amt": "s78"
+      },
+      "DEBT_TO_PENNY01": {
+        "debt_held_public_amt": "sdc",
+        "intragov_hold_amt": "sdd",
+        "record_calendar_day": "sde",
+        "record_calendar_month": "sdf",
+        "record_calendar_quarter": "se0",
+        "record_calendar_year": "se1",
+        "record_date": "se2",
+        "record_fiscal_quarter": "se3",
+        "record_fiscal_year": "se4",
+        "src_line_nbr": "se5",
+        "tot_pub_debt_out_amt": "se6"
+      },
+      "DEBT_TO_PENNY02": {
+        "debt_held_public_amt": "s14a",
+        "intragov_hold_amt": "s14b",
+        "record_calendar_day": "s14c",
+        "record_calendar_month": "s14d",
+        "record_calendar_quarter": "s14e",
+        "record_calendar_year": "s14f",
+        "record_date": "s150",
+        "record_fiscal_quarter": "s151",
+        "record_fiscal_year": "s152",
+        "src_line_nbr": "s153",
+        "tot_pub_debt_out_amt": "s154"
+      }
+    }
+  },
+  "new": {
+    "debt_to_penny": {
+      "debt_to_penny_ref01": {
+        "debt_held_public_amt": "s1b8",
+        "intragov_hold_amt": "s1b9",
+        "record_calendar_day": "s1ba",
+        "record_calendar_month": "s1bb",
+        "record_calendar_quarter": "s1bc",
+        "record_calendar_year": "s1bd",
+        "record_date": "s1be",
+        "record_fiscal_quarter": "s1bf",
+        "record_fiscal_year": "s1c0",
+        "src_line_nbr": "s1c1",
+        "tot_pub_debt_out_amt": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "GET /v2/accounting/od/debt_to_penny": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

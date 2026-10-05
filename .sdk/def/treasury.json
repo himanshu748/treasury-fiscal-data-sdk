@@ -1,0 +1,351 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Treasury Fiscal Data",
+    "version": "0.1.0",
+    "description": "Unofficial two-endpoint OpenAPI description authored from Treasury documentation and live response shapes. Covers Debt to the Penny and Average Interest Rates only. Treasury data is freely reusable; generated SDK code is MIT licensed."
+  },
+  "externalDocs": {
+    "url": "https://fiscaldata.treasury.gov/api-documentation/"
+  },
+  "servers": [
+    {
+      "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service"
+    }
+  ],
+  "security": [],
+  "paths": {
+    "/v2/accounting/od/debt_to_penny": {
+      "get": {
+        "operationId": "listDebtToPenny",
+        "tags": [
+          "DebtToPenny"
+        ],
+        "summary": "List Debt to the Penny records",
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "description": "Comma-separated fields. Selecting fields can trigger aggregation; see Treasury documentation.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Treasury filter expression, such as record_date:gte:2026-01-01.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "description": "Comma-separated fields; a leading minus reverses order.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            }
+          },
+          {
+            "name": "page[size]",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Treasury records with pagination and field metadata. Numeric-looking values remain strings.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DebtToPennyResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/accounting/od/avg_interest_rates": {
+      "get": {
+        "operationId": "listAverageInterestRate",
+        "tags": [
+          "AverageInterestRate"
+        ],
+        "summary": "List average interest rate records",
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "description": "Comma-separated fields. Selecting fields can trigger aggregation; see Treasury documentation.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Treasury filter expression, such as record_date:gte:2026-01-01.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "description": "Comma-separated fields; a leading minus reverses order.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            }
+          },
+          {
+            "name": "page[size]",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Treasury records with pagination and field metadata. Numeric-looking values remain strings.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AverageInterestRateResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "Metadata": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "Links": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "nullable": true
+        }
+      },
+      "DebtToPenny": {
+        "type": "object",
+        "properties": {
+          "record_date": {
+            "type": "string",
+            "description": "Record Date",
+            "format": "date"
+          },
+          "debt_held_public_amt": {
+            "type": "string",
+            "description": "Debt Held by the Public"
+          },
+          "intragov_hold_amt": {
+            "type": "string",
+            "description": "Intragovernmental Holdings"
+          },
+          "tot_pub_debt_out_amt": {
+            "type": "string",
+            "description": "Total Public Debt Outstanding"
+          },
+          "src_line_nbr": {
+            "type": "string",
+            "description": "Source Line Number"
+          },
+          "record_fiscal_year": {
+            "type": "string",
+            "description": "Fiscal Year"
+          },
+          "record_fiscal_quarter": {
+            "type": "string",
+            "description": "Fiscal Quarter Number"
+          },
+          "record_calendar_year": {
+            "type": "string",
+            "description": "Calendar Year"
+          },
+          "record_calendar_quarter": {
+            "type": "string",
+            "description": "Calendar Quarter Number"
+          },
+          "record_calendar_month": {
+            "type": "string",
+            "description": "Calendar Month Number"
+          },
+          "record_calendar_day": {
+            "type": "string",
+            "description": "Calendar Day Number"
+          }
+        },
+        "additionalProperties": true
+      },
+      "DebtToPennyResponse": {
+        "type": "object",
+        "required": [
+          "data",
+          "meta",
+          "links"
+        ],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DebtToPenny"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Metadata"
+          },
+          "links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        }
+      },
+      "AverageInterestRate": {
+        "type": "object",
+        "properties": {
+          "record_date": {
+            "type": "string",
+            "description": "Record Date",
+            "format": "date"
+          },
+          "security_type_desc": {
+            "type": "string",
+            "description": "Security Type Description"
+          },
+          "security_desc": {
+            "type": "string",
+            "description": "Security Description"
+          },
+          "avg_interest_rate_amt": {
+            "type": "string",
+            "description": "Average Interest Rate Amount"
+          },
+          "src_line_nbr": {
+            "type": "string",
+            "description": "Source Line Number"
+          },
+          "record_fiscal_year": {
+            "type": "string",
+            "description": "Fiscal Year"
+          },
+          "record_fiscal_quarter": {
+            "type": "string",
+            "description": "Fiscal Quarter Number"
+          },
+          "record_calendar_year": {
+            "type": "string",
+            "description": "Calendar Year"
+          },
+          "record_calendar_quarter": {
+            "type": "string",
+            "description": "Calendar Quarter Number"
+          },
+          "record_calendar_month": {
+            "type": "string",
+            "description": "Calendar Month Number"
+          },
+          "record_calendar_day": {
+            "type": "string",
+            "description": "Calendar Day Number"
+          }
+        },
+        "additionalProperties": true
+      },
+      "AverageInterestRateResponse": {
+        "type": "object",
+        "required": [
+          "data",
+          "meta",
+          "links"
+        ],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AverageInterestRate"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Metadata"
+          },
+          "links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        }
+      }
+    }
+  }
+}

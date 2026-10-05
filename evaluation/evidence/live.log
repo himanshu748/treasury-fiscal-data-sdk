@@ -1,0 +1,6 @@
+debt-small-page: HTTP 200, 2 records
+interest-small-page: HTTP 200, 2 records
+debt-filter-sort-page: HTTP 200, 2 records
+debt-invalid-field: HTTP 400, Invalid Query Param
+DebtToPenny.list(): 2 real records
+AvgInterestRate.list(): 2 real records

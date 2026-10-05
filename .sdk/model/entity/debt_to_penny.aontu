@@ -1,0 +1,176 @@
+# Entity: debt_to_penny
+
+main: kit: entity: debt_to_penny: {
+
+  alias: field: {}
+
+  fields: {
+    debt_held_public_amt: {
+      h: "Debt Held Public Amt"
+      n: "debt_held_public_amt"
+      r: false
+      sh: "Debt Held by the Public"
+      t: "`$STRING`"
+    }
+    intragov_hold_amt: {
+      h: "Intragov Hold Amt"
+      n: "intragov_hold_amt"
+      r: false
+      sh: "Intragovernmental Holdings"
+      t: "`$STRING`"
+    }
+    record_calendar_day: {
+      h: "Record Calendar Day"
+      n: "record_calendar_day"
+      r: false
+      sh: "Calendar Day Number"
+      t: "`$STRING`"
+    }
+    record_calendar_month: {
+      h: "Record Calendar Month"
+      n: "record_calendar_month"
+      r: false
+      sh: "Calendar Month Number"
+      t: "`$STRING`"
+    }
+    record_calendar_quarter: {
+      h: "Record Calendar Quarter"
+      n: "record_calendar_quarter"
+      r: false
+      sh: "Calendar Quarter Number"
+      t: "`$STRING`"
+    }
+    record_calendar_year: {
+      h: "Record Calendar Year"
+      n: "record_calendar_year"
+      r: false
+      sh: "Calendar Year"
+      t: "`$STRING`"
+    }
+    record_date: {
+      fo: "date"
+      h: "Record Date"
+      n: "record_date"
+      r: false
+      sh: "Record Date"
+      t: "`$STRING`"
+    }
+    record_fiscal_quarter: {
+      h: "Record Fiscal Quarter"
+      n: "record_fiscal_quarter"
+      r: false
+      sh: "Fiscal Quarter Number"
+      t: "`$STRING`"
+    }
+    record_fiscal_year: {
+      h: "Record Fiscal Year"
+      n: "record_fiscal_year"
+      r: false
+      sh: "Fiscal Year"
+      t: "`$STRING`"
+    }
+    src_line_nbr: {
+      h: "Src Line Nbr"
+      n: "src_line_nbr"
+      r: false
+      sh: "Source Line Number"
+      t: "`$STRING`"
+    }
+    tot_pub_debt_out_amt: {
+      h: "Tot Pub Debt Out Amt"
+      n: "tot_pub_debt_out_amt"
+      r: false
+      sh: "Total Public Debt Outstanding"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "debt_to_penny"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v2/accounting/od/debt_to_penny"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "filter"
+                or: "filter"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page_number"
+                or: "page[number]"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 100
+                k: "query"
+                n: "page_size"
+                or: "page[size]"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v2/accounting/od/debt_to_penny"
+          q: {
+            exist: [
+              "field"
+              "filter"
+              "page_number"
+              "page_size"
+              "sort"
+            ]
+          }
+          s: [
+            {
+              lit: "v2"
+            }
+            {
+              lit: "accounting"
+            }
+            {
+              lit: "od"
+            }
+            {
+              lit: "debt_to_penny"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

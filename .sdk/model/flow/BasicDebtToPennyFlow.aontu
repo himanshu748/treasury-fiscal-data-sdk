@@ -1,0 +1,22 @@
+# BasicDebtToPennyFlow
+
+main: kit: flow: BasicDebtToPennyFlow:
+{
+  entity: "debt_to_penny",
+  kind: "basic",
+  name: "BasicDebtToPennyFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "debt_to_penny_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDebtToPennyFlow"
+}

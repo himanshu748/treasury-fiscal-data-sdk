@@ -1,0 +1,20 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Average Interest Rate Amount",
+      "Calendar Day Number",
+      "Calendar Month Number",
+      "Calendar Quarter Number",
+      "Calendar Year",
+      "Debt Held by the Public",
+      "Intragovernmental Holdings",
+      "Treasury records with pagination and field metadata. Numeric-looking values remain strings",
+      "Unofficial two-endpoint OpenAPI description authored from Treasury documentation and live response shapes. Covers Debt to the Penny and Average Interest Rates only. Treasury data is freely reusable; generated SDK code is MIT licensed."
+    ]
+  }
+}

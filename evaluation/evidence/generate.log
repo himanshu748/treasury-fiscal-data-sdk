@@ -1,0 +1,60 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> build-treasury-fiscal-data-sdk@0.0.1 generate
+> node build/docgen.js && tsc --build src && voxgig-model model/sdk.aontu && voxgig-model test/test.aontu
+
+[20:48:58.042] INFO: model                  model-init           
+[20:48:58.046] INFO: model                  build-start          watch:config last:2026-10-05T15:18:58.045Z
+[20:48:58.046] INFO: model                  build-trigger        watch:config trigger:<config>
+(node:47) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[20:48:58.082] INFO: model                  write-model          ./model/.model-config/model-config.json
+[20:48:58.082] INFO: model                  root-keys            watch:config keys: sys
+[20:48:58.083] INFO: model                  build-end            watch:config
+
+[20:48:58.083] INFO: model                  build-start          watch:model last:2026-10-05T15:18:58.083Z
+[20:48:58.083] INFO: model                  build-trigger        watch:model trigger:<start>
+[20:48:58.284] INFO: model                  pre-actions          apidef
+[20:48:58.286] INFO: model/apidef           generate-start       ./def/treasury.json
+[20:48:58.300] INFO: model/apidef           root-keys            openapi, info, externalDocs, servers, security, paths, components
+[20:48:58.311] INFO: model/apidef           heuristic01          entities=2 paths=2 methods=2 tags=2 cmps=7 entity-paths=2 entity-ops=2
+[20:48:58.311] INFO: model/apidef           metrics              epr=1.000  emr=1.000  (entity=2 paths=2 methods=2)
+[20:48:58.313] INFO: model/apidef           generate-guide       ./model/guide/guide.aontu
+[20:48:58.339] INFO: model/apidef           generate-end         success
+
+[20:48:58.435] INFO: model                  write-model          ./model/sdk.json
+[20:48:58.435] INFO: model                  post-actions         sdkgen
+[20:48:58.436] INFO: model/sdkgen           generate-start       
+[20:48:58.480] INFO: model/jostraca         generate-agentguide-top name:TreasuryFiscalData
+[20:48:58.481] INFO: model/jostraca         generate-deploy      targets: ts:npm(publish pending)
+[20:48:58.482] INFO: model/jostraca         generate-publish-workflow npm targets: ts
+[20:48:58.489] INFO: model/jostraca         generate-entity      target:ts, entity: avg_interest_rate
+[20:48:58.491] INFO: model/jostraca         generate-entity      target:ts, entity: debt_to_penny
+[20:48:58.492] INFO: model/jostraca         generate-feature     target:ts, feature: test
+[20:48:58.506] INFO: model/jostraca         generate-main        target:ts
+[20:48:58.513] WARN: model/jostraca         require-missing      ./cmp/ts/ReadmeFeatures_ts
+[20:48:58.518] WARN: model/jostraca         require-missing      ./cmp/ts/AgentGuide_ts
+[20:48:58.519] INFO: model/jostraca         generate-agentguide-feature target:ts, feature:test
+[20:48:58.519] INFO: model/jostraca         generate-agentguide  target:ts
+[20:48:58.533] INFO: model/jostraca         generate-test        target:ts
+[20:48:58.601] INFO: model/sdkgen           generate-end         
+[20:48:58.602] INFO: model                  root-keys            watch:model keys: def;main;name;origin;const;name__orig;Name;name_;name-;NAME
+[20:48:58.602] INFO: model                  build-end            watch:model
+
+[20:48:58.959] INFO: model                  model-init           
+[20:48:58.962] INFO: model                  build-start          watch:config last:2026-10-05T15:18:58.962Z
+[20:48:58.962] INFO: model                  build-trigger        watch:config trigger:<config>
+(node:55) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[20:48:58.997] INFO: model                  write-model          ./test/.model-config/model-config.json
+[20:48:58.998] INFO: model                  root-keys            watch:config keys: sys
+[20:48:58.998] INFO: model                  build-end            watch:config
+
+[20:48:58.998] INFO: model                  build-start          watch:model last:2026-10-05T15:18:58.998Z
+[20:48:58.998] INFO: model                  build-trigger        watch:model trigger:<start>
+[20:48:59.388] INFO: model                  pre-actions          
+[20:48:59.405] INFO: model                  write-model          ./test/test.json
+[20:48:59.406] INFO: model                  post-actions         
+[20:48:59.406] INFO: model                  root-keys            watch:model keys: feature;primary;struct
+[20:48:59.406] INFO: model                  build-end            watch:model
+

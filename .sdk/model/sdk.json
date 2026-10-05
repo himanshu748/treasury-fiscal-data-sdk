@@ -1,0 +1,827 @@
+{
+  "NAME": "TREASURY-FISCAL-DATA",
+  "Name": "TreasuryFiscalData",
+  "def": "treasury.json",
+  "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "Himanshu Kumar",
+        "url": "https://github.com/himanshu748"
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "avg_interest_rate": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "avg_interest_rate_amt": {
+              "a": true,
+              "h": "Avg Interest Rate Amt",
+              "n": "avg_interest_rate_amt",
+              "r": false,
+              "sh": "Average Interest Rate Amount",
+              "t": "`$STRING`"
+            },
+            "record_calendar_day": {
+              "a": true,
+              "h": "Record Calendar Day",
+              "n": "record_calendar_day",
+              "r": false,
+              "sh": "Calendar Day Number",
+              "t": "`$STRING`"
+            },
+            "record_calendar_month": {
+              "a": true,
+              "h": "Record Calendar Month",
+              "n": "record_calendar_month",
+              "r": false,
+              "sh": "Calendar Month Number",
+              "t": "`$STRING`"
+            },
+            "record_calendar_quarter": {
+              "a": true,
+              "h": "Record Calendar Quarter",
+              "n": "record_calendar_quarter",
+              "r": false,
+              "sh": "Calendar Quarter Number",
+              "t": "`$STRING`"
+            },
+            "record_calendar_year": {
+              "a": true,
+              "h": "Record Calendar Year",
+              "n": "record_calendar_year",
+              "r": false,
+              "sh": "Calendar Year",
+              "t": "`$STRING`"
+            },
+            "record_date": {
+              "a": true,
+              "fo": "date",
+              "h": "Record Date",
+              "n": "record_date",
+              "r": false,
+              "sh": "Record Date",
+              "t": "`$STRING`"
+            },
+            "record_fiscal_quarter": {
+              "a": true,
+              "h": "Record Fiscal Quarter",
+              "n": "record_fiscal_quarter",
+              "r": false,
+              "sh": "Fiscal Quarter Number",
+              "t": "`$STRING`"
+            },
+            "record_fiscal_year": {
+              "a": true,
+              "h": "Record Fiscal Year",
+              "n": "record_fiscal_year",
+              "r": false,
+              "sh": "Fiscal Year",
+              "t": "`$STRING`"
+            },
+            "security_desc": {
+              "a": true,
+              "h": "Security Desc",
+              "n": "security_desc",
+              "r": false,
+              "sh": "Security Description",
+              "t": "`$STRING`"
+            },
+            "security_type_desc": {
+              "a": true,
+              "h": "Security Type Desc",
+              "n": "security_type_desc",
+              "r": false,
+              "sh": "Security Type Description",
+              "t": "`$STRING`"
+            },
+            "src_line_nbr": {
+              "a": true,
+              "h": "Src Line Nbr",
+              "n": "src_line_nbr",
+              "r": false,
+              "sh": "Source Line Number",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "avg_interest_rate",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v2/accounting/od/avg_interest_rates",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "filter",
+                        "or": "filter",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 1,
+                        "k": "query",
+                        "n": "page_number",
+                        "or": "page[number]",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 100,
+                        "k": "query",
+                        "n": "page_size",
+                        "or": "page[size]",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v2/accounting/od/avg_interest_rates",
+                  "q": {
+                    "exist": [
+                      "field",
+                      "filter",
+                      "page_number",
+                      "page_size",
+                      "sort"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "v2"
+                    },
+                    {
+                      "lit": "accounting"
+                    },
+                    {
+                      "lit": "od"
+                    },
+                    {
+                      "lit": "avg_interest_rates"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "debt_to_penny": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "debt_held_public_amt": {
+              "a": true,
+              "h": "Debt Held Public Amt",
+              "n": "debt_held_public_amt",
+              "r": false,
+              "sh": "Debt Held by the Public",
+              "t": "`$STRING`"
+            },
+            "intragov_hold_amt": {
+              "a": true,
+              "h": "Intragov Hold Amt",
+              "n": "intragov_hold_amt",
+              "r": false,
+              "sh": "Intragovernmental Holdings",
+              "t": "`$STRING`"
+            },
+            "record_calendar_day": {
+              "a": true,
+              "h": "Record Calendar Day",
+              "n": "record_calendar_day",
+              "r": false,
+              "sh": "Calendar Day Number",
+              "t": "`$STRING`"
+            },
+            "record_calendar_month": {
+              "a": true,
+              "h": "Record Calendar Month",
+              "n": "record_calendar_month",
+              "r": false,
+              "sh": "Calendar Month Number",
+              "t": "`$STRING`"
+            },
+            "record_calendar_quarter": {
+              "a": true,
+              "h": "Record Calendar Quarter",
+              "n": "record_calendar_quarter",
+              "r": false,
+              "sh": "Calendar Quarter Number",
+              "t": "`$STRING`"
+            },
+            "record_calendar_year": {
+              "a": true,
+              "h": "Record Calendar Year",
+              "n": "record_calendar_year",
+              "r": false,
+              "sh": "Calendar Year",
+              "t": "`$STRING`"
+            },
+            "record_date": {
+              "a": true,
+              "fo": "date",
+              "h": "Record Date",
+              "n": "record_date",
+              "r": false,
+              "sh": "Record Date",
+              "t": "`$STRING`"
+            },
+            "record_fiscal_quarter": {
+              "a": true,
+              "h": "Record Fiscal Quarter",
+              "n": "record_fiscal_quarter",
+              "r": false,
+              "sh": "Fiscal Quarter Number",
+              "t": "`$STRING`"
+            },
+            "record_fiscal_year": {
+              "a": true,
+              "h": "Record Fiscal Year",
+              "n": "record_fiscal_year",
+              "r": false,
+              "sh": "Fiscal Year",
+              "t": "`$STRING`"
+            },
+            "src_line_nbr": {
+              "a": true,
+              "h": "Src Line Nbr",
+              "n": "src_line_nbr",
+              "r": false,
+              "sh": "Source Line Number",
+              "t": "`$STRING`"
+            },
+            "tot_pub_debt_out_amt": {
+              "a": true,
+              "h": "Tot Pub Debt Out Amt",
+              "n": "tot_pub_debt_out_amt",
+              "r": false,
+              "sh": "Total Public Debt Outstanding",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "debt_to_penny",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v2/accounting/od/debt_to_penny",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "filter",
+                        "or": "filter",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 1,
+                        "k": "query",
+                        "n": "page_number",
+                        "or": "page[number]",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 100,
+                        "k": "query",
+                        "n": "page_size",
+                        "or": "page[size]",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v2/accounting/od/debt_to_penny",
+                  "q": {
+                    "exist": [
+                      "field",
+                      "filter",
+                      "page_number",
+                      "page_size",
+                      "sort"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "v2"
+                    },
+                    {
+                      "lit": "accounting"
+                    },
+                    {
+                      "lit": "od"
+                    },
+                    {
+                      "lit": "debt_to_penny"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicAvgInterestRateFlow": {
+          "active": true,
+          "entity": "avg_interest_rate",
+          "key$": "BasicAvgInterestRateFlow",
+          "kind": "basic",
+          "name": "BasicAvgInterestRateFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "avg_interest_rate_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicDebtToPennyFlow": {
+          "active": true,
+          "entity": "debt_to_penny",
+          "key$": "BasicDebtToPennyFlow",
+          "kind": "basic",
+          "name": "BasicDebtToPennyFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "debt_to_penny_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "auth": false,
+        "description": "Unofficial two-endpoint OpenAPI description authored from Treasury documentation and live response shapes. Covers Debt to the Penny and Average Interest Rates only. Treasury data is freely reusable; generated SDK code is MIT licensed.",
+        "servers": [
+          {
+            "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service"
+          }
+        ],
+        "summary": "Unofficial two-endpoint OpenAPI description authored from Treasury documentation and live response shapes.",
+        "title": "Treasury Fiscal Data",
+        "version": "0.1.0",
+        "website": "https://fiscaldata.treasury.gov/api-documentation/"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "repo": {
+        "host": "github.com",
+        "path": "himanshu748/treasury-fiscal-data-sdk"
+      },
+      "target": {
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "treasury-fiscal-data",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "treasury-fiscal-data-sdk",
+              "state": "inactive",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.1.0"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      }
+    }
+  },
+  "name": "treasury-fiscal-data",
+  "name-": "treasury-fiscal-data",
+  "name_": "treasury_fiscal_data",
+  "name__orig": "treasury-fiscal-data",
+  "origin": "voxgig-sdk"
+}

@@ -1,0 +1,14 @@
+✔ direct GET retains path and decoded query values for /v2/accounting/od/debt_to_penny (25.901763ms)
+✔ direct GET retains path and decoded query values for /v2/accounting/od/avg_interest_rates (4.735824ms)
+✔ successful response preserves string records and metadata envelope (3.458443ms)
+✔ empty data remains a successful response (2.16731ms)
+✔ HTTP 400 preserves Treasury error response without false success (1.975522ms)
+✔ network failure surfaces without a false success envelope (2.108822ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.519871

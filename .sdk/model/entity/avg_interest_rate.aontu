@@ -1,0 +1,176 @@
+# Entity: avg_interest_rate
+
+main: kit: entity: avg_interest_rate: {
+
+  alias: field: {}
+
+  fields: {
+    avg_interest_rate_amt: {
+      h: "Avg Interest Rate Amt"
+      n: "avg_interest_rate_amt"
+      r: false
+      sh: "Average Interest Rate Amount"
+      t: "`$STRING`"
+    }
+    record_calendar_day: {
+      h: "Record Calendar Day"
+      n: "record_calendar_day"
+      r: false
+      sh: "Calendar Day Number"
+      t: "`$STRING`"
+    }
+    record_calendar_month: {
+      h: "Record Calendar Month"
+      n: "record_calendar_month"
+      r: false
+      sh: "Calendar Month Number"
+      t: "`$STRING`"
+    }
+    record_calendar_quarter: {
+      h: "Record Calendar Quarter"
+      n: "record_calendar_quarter"
+      r: false
+      sh: "Calendar Quarter Number"
+      t: "`$STRING`"
+    }
+    record_calendar_year: {
+      h: "Record Calendar Year"
+      n: "record_calendar_year"
+      r: false
+      sh: "Calendar Year"
+      t: "`$STRING`"
+    }
+    record_date: {
+      fo: "date"
+      h: "Record Date"
+      n: "record_date"
+      r: false
+      sh: "Record Date"
+      t: "`$STRING`"
+    }
+    record_fiscal_quarter: {
+      h: "Record Fiscal Quarter"
+      n: "record_fiscal_quarter"
+      r: false
+      sh: "Fiscal Quarter Number"
+      t: "`$STRING`"
+    }
+    record_fiscal_year: {
+      h: "Record Fiscal Year"
+      n: "record_fiscal_year"
+      r: false
+      sh: "Fiscal Year"
+      t: "`$STRING`"
+    }
+    security_desc: {
+      h: "Security Desc"
+      n: "security_desc"
+      r: false
+      sh: "Security Description"
+      t: "`$STRING`"
+    }
+    security_type_desc: {
+      h: "Security Type Desc"
+      n: "security_type_desc"
+      r: false
+      sh: "Security Type Description"
+      t: "`$STRING`"
+    }
+    src_line_nbr: {
+      h: "Src Line Nbr"
+      n: "src_line_nbr"
+      r: false
+      sh: "Source Line Number"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "avg_interest_rate"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v2/accounting/od/avg_interest_rates"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "filter"
+                or: "filter"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page_number"
+                or: "page[number]"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 100
+                k: "query"
+                n: "page_size"
+                or: "page[size]"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v2/accounting/od/avg_interest_rates"
+          q: {
+            exist: [
+              "field"
+              "filter"
+              "page_number"
+              "page_size"
+              "sort"
+            ]
+          }
+          s: [
+            {
+              lit: "v2"
+            }
+            {
+              lit: "accounting"
+            }
+            {
+              lit: "od"
+            }
+            {
+              lit: "avg_interest_rates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

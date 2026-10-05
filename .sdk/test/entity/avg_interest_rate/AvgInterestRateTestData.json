@@ -1,0 +1,69 @@
+{
+  "existing": {
+    "avg_interest_rate": {
+      "AVG_INTEREST_RATE00": {
+        "avg_interest_rate_amt": "s6e",
+        "record_calendar_day": "s6f",
+        "record_calendar_month": "s70",
+        "record_calendar_quarter": "s71",
+        "record_calendar_year": "s72",
+        "record_date": "s73",
+        "record_fiscal_quarter": "s74",
+        "record_fiscal_year": "s75",
+        "security_desc": "s76",
+        "security_type_desc": "s77",
+        "src_line_nbr": "s78"
+      },
+      "AVG_INTEREST_RATE01": {
+        "avg_interest_rate_amt": "sdc",
+        "record_calendar_day": "sdd",
+        "record_calendar_month": "sde",
+        "record_calendar_quarter": "sdf",
+        "record_calendar_year": "se0",
+        "record_date": "se1",
+        "record_fiscal_quarter": "se2",
+        "record_fiscal_year": "se3",
+        "security_desc": "se4",
+        "security_type_desc": "se5",
+        "src_line_nbr": "se6"
+      },
+      "AVG_INTEREST_RATE02": {
+        "avg_interest_rate_amt": "s14a",
+        "record_calendar_day": "s14b",
+        "record_calendar_month": "s14c",
+        "record_calendar_quarter": "s14d",
+        "record_calendar_year": "s14e",
+        "record_date": "s14f",
+        "record_fiscal_quarter": "s150",
+        "record_fiscal_year": "s151",
+        "security_desc": "s152",
+        "security_type_desc": "s153",
+        "src_line_nbr": "s154"
+      }
+    }
+  },
+  "new": {
+    "avg_interest_rate": {
+      "avg_interest_rate_ref01": {
+        "avg_interest_rate_amt": "s1b8",
+        "record_calendar_day": "s1b9",
+        "record_calendar_month": "s1ba",
+        "record_calendar_quarter": "s1bb",
+        "record_calendar_year": "s1bc",
+        "record_date": "s1bd",
+        "record_fiscal_quarter": "s1be",
+        "record_fiscal_year": "s1bf",
+        "security_desc": "s1c0",
+        "security_type_desc": "s1c1",
+        "src_line_nbr": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "GET /v2/accounting/od/avg_interest_rates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      description: "Unofficial two-endpoint OpenAPI description authored from Treasury documentation and live response shapes. Covers Debt to the Penny and Average Interest Rates only. Treasury data is freely reusable; generated SDK code is MIT licensed."
+      servers: [
+        {
+          url: "https://api.fiscaldata.treasury.gov/services/api/fiscal_service"
+        }
+      ]
+      summary: "Unofficial two-endpoint OpenAPI description authored from Treasury documentation and live response shapes."
+      title: "Treasury Fiscal Data"
+      version: "0.1.0"
+      website: "https://fiscaldata.treasury.gov/api-documentation/"
+    }
+  }
+}
+

@@ -1,0 +1,22 @@
+# BasicAvgInterestRateFlow
+
+main: kit: flow: BasicAvgInterestRateFlow:
+{
+  entity: "avg_interest_rate",
+  kind: "basic",
+  name: "BasicAvgInterestRateFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "avg_interest_rate_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAvgInterestRateFlow"
+}

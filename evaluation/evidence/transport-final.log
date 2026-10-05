@@ -1,0 +1,16 @@
+✔ direct GET retains path and decoded query values for /v2/accounting/od/debt_to_penny (34.35118ms)
+✔ direct GET retains path and decoded query values for /v2/accounting/od/avg_interest_rates (3.869254ms)
+✔ successful response preserves string records and metadata envelope (2.866584ms)
+✔ empty data remains a successful response (2.229425ms)
+✔ HTTP 400 preserves Treasury error response without false success (1.957076ms)
+✔ network failure surfaces without a false success envelope (1.945949ms)
+✔ DebtToPenny list maps canonical query names and extracts Treasury data (3.625116ms)
+✔ AvgInterestRate list maps canonical query names and extracts Treasury data (2.760455ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 192.625993

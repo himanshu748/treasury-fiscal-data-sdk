@@ -1,0 +1,56 @@
+{
+  "version": "0.0.1",
+  "name": "build-treasury-fiscal-data-sdk",
+  "dependencies": {
+    "@types/node": {
+      "version": "26.6.4",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-26.6.4.tgz",
+      "overridden": false
+    },
+    "@voxgig/apidef": {
+      "version": "8.22.1",
+      "resolved": "https://registry.npmjs.org/@voxgig/apidef/-/apidef-8.22.1.tgz",
+      "overridden": false
+    },
+    "@voxgig/docgen": {
+      "version": "0.30.1",
+      "resolved": "https://registry.npmjs.org/@voxgig/docgen/-/docgen-0.30.1.tgz",
+      "overridden": false
+    },
+    "@voxgig/model": {
+      "version": "12.0.0",
+      "resolved": "https://registry.npmjs.org/@voxgig/model/-/model-12.0.0.tgz",
+      "overridden": false
+    },
+    "@voxgig/sdkgen": {
+      "version": "4.34.0",
+      "resolved": "https://registry.npmjs.org/@voxgig/sdkgen/-/sdkgen-4.34.0.tgz",
+      "overridden": false
+    },
+    "@voxgig/struct": {
+      "version": "0.3.6",
+      "resolved": "https://registry.npmjs.org/@voxgig/struct/-/struct-0.3.6.tgz",
+      "overridden": false
+    },
+    "@voxgig/util": {
+      "version": "0.5.8",
+      "resolved": "https://registry.npmjs.org/@voxgig/util/-/util-0.5.8.tgz",
+      "overridden": false
+    },
+    "aontu": {
+      "version": "0.76.0",
+      "resolved": "https://registry.npmjs.org/aontu/-/aontu-0.76.0.tgz",
+      "overridden": false
+    },
+    "jostraca": {
+      "version": "0.39.0",
+      "resolved": "https://registry.npmjs.org/jostraca/-/jostraca-0.39.0.tgz",
+      "overridden": false
+    },
+    "typescript": {
+      "version": "7.0.2",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz",
+      "overridden": false
+    }
+  }
+}

@@ -1,0 +1,359 @@
+[
+  {
+    "name": "debt-small-page",
+    "timestamp": "2026-10-05T15:24:48.707Z",
+    "path": "/v2/accounting/od/debt_to_penny",
+    "query": {
+      "sort": "-record_date",
+      "page[size]": 2
+    },
+    "ok": true,
+    "status": 200,
+    "data": {
+      "data": [
+        {
+          "record_date": "2026-10-01",
+          "debt_held_public_amt": "32433790394253.86",
+          "intragov_hold_amt": "7826851578136.17",
+          "tot_pub_debt_out_amt": "40260641972390.03",
+          "src_line_nbr": "1",
+          "record_fiscal_year": "2027",
+          "record_fiscal_quarter": "1",
+          "record_calendar_year": "2026",
+          "record_calendar_quarter": "4",
+          "record_calendar_month": "10",
+          "record_calendar_day": "01"
+        },
+        {
+          "record_date": "2026-09-30",
+          "debt_held_public_amt": "32425012546390.57",
+          "intragov_hold_amt": "7746812554949.74",
+          "tot_pub_debt_out_amt": "40171825101340.31",
+          "src_line_nbr": "1",
+          "record_fiscal_year": "2026",
+          "record_fiscal_quarter": "4",
+          "record_calendar_year": "2026",
+          "record_calendar_quarter": "3",
+          "record_calendar_month": "09",
+          "record_calendar_day": "30"
+        }
+      ],
+      "meta": {
+        "count": 2,
+        "labels": {
+          "record_date": "Record Date",
+          "debt_held_public_amt": "Debt Held by the Public",
+          "intragov_hold_amt": "Intragovernmental Holdings",
+          "tot_pub_debt_out_amt": "Total Public Debt Outstanding",
+          "src_line_nbr": "Source Line Number",
+          "record_fiscal_year": "Fiscal Year",
+          "record_fiscal_quarter": "Fiscal Quarter Number",
+          "record_calendar_year": "Calendar Year",
+          "record_calendar_quarter": "Calendar Quarter Number",
+          "record_calendar_month": "Calendar Month Number",
+          "record_calendar_day": "Calendar Day Number"
+        },
+        "dataTypes": {
+          "record_date": "DATE",
+          "debt_held_public_amt": "CURRENCY",
+          "intragov_hold_amt": "CURRENCY",
+          "tot_pub_debt_out_amt": "CURRENCY",
+          "src_line_nbr": "INTEGER",
+          "record_fiscal_year": "YEAR",
+          "record_fiscal_quarter": "QUARTER",
+          "record_calendar_year": "YEAR",
+          "record_calendar_quarter": "QUARTER",
+          "record_calendar_month": "MONTH",
+          "record_calendar_day": "DAY"
+        },
+        "dataFormats": {
+          "record_date": "YYYY-MM-DD",
+          "debt_held_public_amt": "$10.20",
+          "intragov_hold_amt": "$10.20",
+          "tot_pub_debt_out_amt": "$10.20",
+          "src_line_nbr": "10",
+          "record_fiscal_year": "YYYY",
+          "record_fiscal_quarter": "Q",
+          "record_calendar_year": "YYYY",
+          "record_calendar_quarter": "Q",
+          "record_calendar_month": "MM",
+          "record_calendar_day": "DD"
+        },
+        "total-count": 8405,
+        "total-pages": 4203
+      },
+      "links": {
+        "self": "&page%5Bnumber%5D=1&page%5Bsize%5D=2",
+        "first": "&page%5Bnumber%5D=1&page%5Bsize%5D=2",
+        "prev": null,
+        "next": "&page%5Bnumber%5D=2&page%5Bsize%5D=2",
+        "last": "&page%5Bnumber%5D=4203&page%5Bsize%5D=2"
+      }
+    }
+  },
+  {
+    "name": "interest-small-page",
+    "timestamp": "2026-10-05T15:24:49.091Z",
+    "path": "/v2/accounting/od/avg_interest_rates",
+    "query": {
+      "sort": "-record_date",
+      "page[size]": 2
+    },
+    "ok": true,
+    "status": 200,
+    "data": {
+      "data": [
+        {
+          "record_date": "2026-08-31",
+          "security_type_desc": "Marketable",
+          "security_desc": "Treasury Bills",
+          "avg_interest_rate_amt": "3.788",
+          "src_line_nbr": "1",
+          "record_fiscal_year": "2026",
+          "record_fiscal_quarter": "4",
+          "record_calendar_year": "2026",
+          "record_calendar_quarter": "3",
+          "record_calendar_month": "08",
+          "record_calendar_day": "31"
+        },
+        {
+          "record_date": "2026-08-31",
+          "security_type_desc": "Marketable",
+          "security_desc": "Treasury Notes",
+          "avg_interest_rate_amt": "3.345",
+          "src_line_nbr": "2",
+          "record_fiscal_year": "2026",
+          "record_fiscal_quarter": "4",
+          "record_calendar_year": "2026",
+          "record_calendar_quarter": "3",
+          "record_calendar_month": "08",
+          "record_calendar_day": "31"
+        }
+      ],
+      "meta": {
+        "count": 2,
+        "labels": {
+          "record_date": "Record Date",
+          "security_type_desc": "Security Type Description",
+          "security_desc": "Security Description",
+          "avg_interest_rate_amt": "Average Interest Rate Amount",
+          "src_line_nbr": "Source Line Number",
+          "record_fiscal_year": "Fiscal Year",
+          "record_fiscal_quarter": "Fiscal Quarter Number",
+          "record_calendar_year": "Calendar Year",
+          "record_calendar_quarter": "Calendar Quarter Number",
+          "record_calendar_month": "Calendar Month Number",
+          "record_calendar_day": "Calendar Day Number"
+        },
+        "dataTypes": {
+          "record_date": "DATE",
+          "security_type_desc": "STRING",
+          "security_desc": "STRING",
+          "avg_interest_rate_amt": "PERCENTAGE",
+          "src_line_nbr": "INTEGER",
+          "record_fiscal_year": "YEAR",
+          "record_fiscal_quarter": "QUARTER",
+          "record_calendar_year": "YEAR",
+          "record_calendar_quarter": "QUARTER",
+          "record_calendar_month": "MONTH",
+          "record_calendar_day": "DAY"
+        },
+        "dataFormats": {
+          "record_date": "YYYY-MM-DD",
+          "security_type_desc": "String",
+          "security_desc": "String",
+          "avg_interest_rate_amt": "10.2%",
+          "src_line_nbr": "10",
+          "record_fiscal_year": "YYYY",
+          "record_fiscal_quarter": "Q",
+          "record_calendar_year": "YYYY",
+          "record_calendar_quarter": "Q",
+          "record_calendar_month": "MM",
+          "record_calendar_day": "DD"
+        },
+        "total-count": 5009,
+        "total-pages": 2505
+      },
+      "links": {
+        "self": "&page%5Bnumber%5D=1&page%5Bsize%5D=2",
+        "first": "&page%5Bnumber%5D=1&page%5Bsize%5D=2",
+        "prev": null,
+        "next": "&page%5Bnumber%5D=2&page%5Bsize%5D=2",
+        "last": "&page%5Bnumber%5D=2505&page%5Bsize%5D=2"
+      }
+    }
+  },
+  {
+    "name": "debt-filter-sort-page",
+    "timestamp": "2026-10-05T15:24:49.370Z",
+    "path": "/v2/accounting/od/debt_to_penny",
+    "query": {
+      "filter": "record_date:gte:2026-01-01",
+      "sort": "-record_date",
+      "page[number]": 2,
+      "page[size]": 2
+    },
+    "ok": true,
+    "status": 200,
+    "data": {
+      "data": [
+        {
+          "record_date": "2026-09-29",
+          "debt_held_public_amt": "32367872193303.63",
+          "intragov_hold_amt": "7729082440263.05",
+          "tot_pub_debt_out_amt": "40096954633566.68",
+          "src_line_nbr": "1",
+          "record_fiscal_year": "2026",
+          "record_fiscal_quarter": "4",
+          "record_calendar_year": "2026",
+          "record_calendar_quarter": "3",
+          "record_calendar_month": "09",
+          "record_calendar_day": "29"
+        },
+        {
+          "record_date": "2026-09-28",
+          "debt_held_public_amt": "32386263609755.87",
+          "intragov_hold_amt": "7715922087109.50",
+          "tot_pub_debt_out_amt": "40102185696865.37",
+          "src_line_nbr": "1",
+          "record_fiscal_year": "2026",
+          "record_fiscal_quarter": "4",
+          "record_calendar_year": "2026",
+          "record_calendar_quarter": "3",
+          "record_calendar_month": "09",
+          "record_calendar_day": "28"
+        }
+      ],
+      "meta": {
+        "count": 2,
+        "labels": {
+          "record_date": "Record Date",
+          "debt_held_public_amt": "Debt Held by the Public",
+          "intragov_hold_amt": "Intragovernmental Holdings",
+          "tot_pub_debt_out_amt": "Total Public Debt Outstanding",
+          "src_line_nbr": "Source Line Number",
+          "record_fiscal_year": "Fiscal Year",
+          "record_fiscal_quarter": "Fiscal Quarter Number",
+          "record_calendar_year": "Calendar Year",
+          "record_calendar_quarter": "Calendar Quarter Number",
+          "record_calendar_month": "Calendar Month Number",
+          "record_calendar_day": "Calendar Day Number"
+        },
+        "dataTypes": {
+          "record_date": "DATE",
+          "debt_held_public_amt": "CURRENCY",
+          "intragov_hold_amt": "CURRENCY",
+          "tot_pub_debt_out_amt": "CURRENCY",
+          "src_line_nbr": "INTEGER",
+          "record_fiscal_year": "YEAR",
+          "record_fiscal_quarter": "QUARTER",
+          "record_calendar_year": "YEAR",
+          "record_calendar_quarter": "QUARTER",
+          "record_calendar_month": "MONTH",
+          "record_calendar_day": "DAY"
+        },
+        "dataFormats": {
+          "record_date": "YYYY-MM-DD",
+          "debt_held_public_amt": "$10.20",
+          "intragov_hold_amt": "$10.20",
+          "tot_pub_debt_out_amt": "$10.20",
+          "src_line_nbr": "10",
+          "record_fiscal_year": "YYYY",
+          "record_fiscal_quarter": "Q",
+          "record_calendar_year": "YYYY",
+          "record_calendar_quarter": "Q",
+          "record_calendar_month": "MM",
+          "record_calendar_day": "DD"
+        },
+        "total-count": 190,
+        "total-pages": 95
+      },
+      "links": {
+        "self": "&page%5Bnumber%5D=2&page%5Bsize%5D=2",
+        "first": "&page%5Bnumber%5D=1&page%5Bsize%5D=2",
+        "prev": "&page%5Bnumber%5D=1&page%5Bsize%5D=2",
+        "next": "&page%5Bnumber%5D=3&page%5Bsize%5D=2",
+        "last": "&page%5Bnumber%5D=95&page%5Bsize%5D=2"
+      }
+    }
+  },
+  {
+    "name": "debt-invalid-field",
+    "timestamp": "2026-10-05T15:24:49.658Z",
+    "path": "/v2/accounting/od/debt_to_penny",
+    "query": {
+      "fields": "invalid_field",
+      "page[size]": 1
+    },
+    "ok": false,
+    "status": 400,
+    "data": {
+      "error": "Invalid Query Param",
+      "message": "Invalid query parameter: Field 'invalid_field' does not exist. For more information, please see the documentation."
+    }
+  },
+  {
+    "name": "entity-DebtToPenny",
+    "timestamp": "2026-10-05T15:25:01.101Z",
+    "records": [
+      {
+        "record_date": "2026-10-01",
+        "debt_held_public_amt": "32433790394253.86",
+        "intragov_hold_amt": "7826851578136.17",
+        "tot_pub_debt_out_amt": "40260641972390.03",
+        "src_line_nbr": "1",
+        "record_fiscal_year": "2027",
+        "record_fiscal_quarter": "1",
+        "record_calendar_year": "2026",
+        "record_calendar_quarter": "4",
+        "record_calendar_month": "10",
+        "record_calendar_day": "01"
+      },
+      {
+        "record_date": "2026-09-30",
+        "debt_held_public_amt": "32425012546390.57",
+        "intragov_hold_amt": "7746812554949.74",
+        "tot_pub_debt_out_amt": "40171825101340.31",
+        "src_line_nbr": "1",
+        "record_fiscal_year": "2026",
+        "record_fiscal_quarter": "4",
+        "record_calendar_year": "2026",
+        "record_calendar_quarter": "3",
+        "record_calendar_month": "09",
+        "record_calendar_day": "30"
+      }
+    ]
+  },
+  {
+    "name": "entity-AvgInterestRate",
+    "timestamp": "2026-10-05T15:25:13.087Z",
+    "records": [
+      {
+        "record_date": "2026-08-31",
+        "security_type_desc": "Marketable",
+        "security_desc": "Treasury Bills",
+        "avg_interest_rate_amt": "3.788",
+        "src_line_nbr": "1",
+        "record_fiscal_year": "2026",
+        "record_fiscal_quarter": "4",
+        "record_calendar_year": "2026",
+        "record_calendar_quarter": "3",
+        "record_calendar_month": "08",
+        "record_calendar_day": "31"
+      },
+      {
+        "record_date": "2026-08-31",
+        "security_type_desc": "Marketable",
+        "security_desc": "Treasury Notes",
+        "avg_interest_rate_amt": "3.345",
+        "src_line_nbr": "2",
+        "record_fiscal_year": "2026",
+        "record_fiscal_quarter": "4",
+        "record_calendar_year": "2026",
+        "record_calendar_quarter": "3",
+        "record_calendar_month": "08",
+        "record_calendar_day": "31"
+      }
+    ]
+  }
+]
