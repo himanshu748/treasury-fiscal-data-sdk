@@ -23,21 +23,7 @@ cd ..
 
 To use it in another Node project, install this repository's `ts` directory with `npm install /path/to/treasury-fiscal-data-sdk/ts`. Then import `{ TreasuryFiscalDataSDK }` from `treasury-fiscal-data-sdk`.
 
-## Quickstart
-
-After installing the local package in your TypeScript project:
-
-```ts
-import { TreasuryFiscalDataSDK } from 'treasury-fiscal-data-sdk'
-
-const client = new TreasuryFiscalDataSDK()
-const debt = await client.DebtToPenny().list({ page_size: 2 })
-const rates = await client.AvgInterestRate().list({ page_size: 2 })
-console.log(debt.map(record => record.data()))
-console.log(rates.map(record => record.data()))
-```
-
-Use an ES module or an async function for these `await` calls.
+## Read data
 
 Run this example from the repository root as a `.cjs` file:
 
